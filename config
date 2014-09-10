@@ -1,0 +1,21 @@
+###########
+# general #
+###########
+
+export EDITOR="vim"
+
+# Autocorrect mispelled directories
+shopt -s cdspell
+
+# Set this so screen will show the currently-running program
+PROMPT_COMMAND='echo -ne "\033k\033\\"'
+
+# Disable flow control commands (keeps C-s from freezing everything)
+stty start undef
+stty stop undef
+
+#################
+#  prompt stuff #
+#################
+YELLOW="\[\033[0;33m\]"
+export PS1="=================================================================================================================================================\n\[\033[01;32m\]\u@\h\[\033[01;34m\] \w$YELLOW \$(parse_git_branch) \$\[\033[00m\] "
